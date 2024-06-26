@@ -28,3 +28,56 @@ for (let i = 0; i < evenDivs.length; i++){
 
 }
 
+const navText = document.querySelector("nav h1");
+navText.textContent = "Hello!";
+const navBar = document.querySelector("nav");
+navBar.innerHTML = "<h1>Hello World!</h1> <p>This should be on the right.</p>";
+console.log(navBar);
+navBar.style.justifyContent = "space-between";
+
+console.log(evenDivs[0]);
+console.log(evenDivs[0].parentElement);
+console.log(evenDivs[0].parentElement.children);
+console.log(evenDivs[0].parentElement.childNodes);
+console.log(evenDivs[0].parentElement.hasChildNodes());
+console.log(evenDivs[0].parentElement.lastChild);
+console.log(evenDivs[0].parentElement.lastElementChild);
+console.log(evenDivs[0].parentElement.firstChild);
+console.log(evenDivs[0].nextSibling);
+console.log(evenDivs[0].nextElementSibling.nextElementSibling);
+console.log(evenDivs[0].previousSibling);
+console.log(evenDivs[0].previousElementSibling);
+
+//view1.style.display = "none";
+view2.style.display = "flex";
+view2.style.flexWrap = "wrap";
+
+//Loop to remove all content
+while (view2.lastChild) {
+    view2.lastChild.remove();
+}
+
+const createDivs = (parent, iter) => {
+    const newDiv = document.createElement("div");
+    newDiv.textContent = iter;
+    newDiv.style.backgroundColor = "#000000";
+    newDiv.style.color = "white";
+    newDiv.style.width = "250px";
+    newDiv.style.height = "250px";
+    newDiv.style.margin = "30px auto";
+    newDiv.style.display = "flex";
+    newDiv.style.justifyContent = "center";
+    newDiv.style.alignItems = "center";
+    parent.append(newDiv);
+};
+    
+    for(i = 1; i <= 9; i++){
+        createDivs(view2, i);
+    }
+    
+
+
+
+
+
+
